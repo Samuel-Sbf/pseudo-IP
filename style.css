@@ -1,7 +1,149 @@
-body {
-display:flex;
-flex-direction: column;
-justify-content: center;
-min-height: 95vh;
-align-items: center;
-}
+
+.copy::after {
+    content: "IP copiado com sucesso!";
+    position: absolute;
+    top: 15px;
+    left: 15px;
+    color: white;
+    background-color: blueviolet;
+    border-radius: 30px;
+    height: 50px;
+    padding: 5px 20px;
+    display: flex;
+    align-items: center;
+    opacity: 0;
+    animation: aparecendo 1s;
+  }
+
+  @keyframes aparecendo {
+    0% {
+      opacity: 1;
+    }
+    50% {
+      opacity: 1;
+    }
+    100% {
+      opacity: 0;
+    }
+  }
+
+  #busca {
+    margin-top: 15px;
+    margin-bottom: 15px;
+    background-color: white;
+    padding: 10px;
+    border-radius: 10px;
+    border: solid black 2px;
+    width: 100px;
+    color: black;
+    font-weight: bold;
+  }
+
+  /* Import da fonte TT Supermolot Neue */
+  @import url("https://fonts.googleapis.com/css2?family=TT+Supermolot+Neue:wght@400;700&display=swap");
+
+  * {
+    margin: 0;
+    padding: 0;
+    font-family: "TT Supermolot Neue", sans-serif;
+  }
+
+  /* Estilo global */
+  body {
+    background: url("https://lh3.googleusercontent.com/u/0/drive-viewer/AK7aPaDxQfZQ3yxP4daK0bZE9xg-7nL_0wzP4JniV82sH1OsfM0wSq3f8aBhmAnhVTlKBaYcHxG6kwYX-26KQwFo_5IYyvqB=w1559-h759")
+      no-repeat bottom left;
+    background-size: cover;
+    color: #fff;
+    min-height: 100vh;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-direction: column;
+    gap: 15px;
+  }
+
+  body::after {
+    content: "";
+    width: 100%;
+    height: 100%;
+    position: fixed;
+    top: 0;
+    background-color: rgba(0, 0, 0, 0.25);
+    z-index: -100;
+  }
+
+  /* Estilo do título */
+  h1,
+  h2,
+  h3 {
+    text-align: center;
+  }
+
+  /* Estilo do contêiner principal */
+  main {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-end;
+    gap: 15px;
+    background-color: rgba(0, 0, 0, 0.6);
+    padding: 50px;
+    border-radius: 30px;
+    width: 350px;
+    height: 350px;
+  }
+
+  /* Estilo da lista sem marcadores */
+  ul {
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+  }
+
+  /* Estilo dos itens da lista */
+  li {
+    font-weight: bold;
+    font-size: 20px;
+    gap: 15px;
+    display: flex;
+    justify-content: space-between;
+    cursor: pointer;
+  }
+
+  /* Estilo do campo de entrada de número de loja */
+  #CE {
+    width: 50px;
+    padding: 5px 0;
+    outline: 0;
+    border: 0;
+    font-size: 16px;
+    text-align: center;
+  }
+
+  /* Estilo do campo de informações da loja */
+  #infos {
+    color: #fff;
+  }
+
+  /* Estilo das informações da loja */
+  #link,
+  #sp,
+  #estoque,
+  #OMS,
+  #Bar,
+  #PDV {
+    color: var(--identifica);
+  }
+
+  #sobre {
+    width: 100%;
+    height: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: black;
+    font-weight: bold;
+    font-size: 20px;
+  }
