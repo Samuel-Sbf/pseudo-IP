@@ -4,11 +4,8 @@
     <meta charset="UTF-8" />
     <title>Ips - SAN</title>
     <link rel="stylesheet" href="style.css" />
-    <link
-      rel="stylesheet"
-      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
-    />
-    
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" />
+
     <style id="root">
       :root {
         --identifica: yellow;
@@ -27,22 +24,18 @@
 
       <section id="infos">
         <h3>UF: <span id="uf"></span></h3>
-        <h3>
-          Regional: <span id="regional"></span>
-        </h3>
+        <h3>Regional: <span id="regional"></span></h3>
         <h3>
           Tel: <span id="tel"></span>
-
-          <button
-            id="Btnwhats"
-            onclick="window.open(`https://web.whatsapp.com/send/?phone=55${$tel.textContent}`, '_blank');"
-          >
+          
+          <button id="Btnwhats" onclick="window.open(`https://web.whatsapp.com/send/?phone=55${$tel.textContent}`, '_blank');">
             <i class="fa fa-whatsapp"></i>
           </button>
-
+          
           <button id="BtnCopy" onclick="copy($tel.textContent)">
             <i class="fa fa-copy"></i>
           </button>
+
         </h3>
         <br />
         <h2>Nome: <span id="nome"></span></h2>
