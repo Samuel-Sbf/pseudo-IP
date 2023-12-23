@@ -87,13 +87,14 @@ function estiloDaPagina (loja) {
     /*pegamos o ID do regional para pegar os dados dele na lista de regionais*/
     if (dados['regional']) {
       $regional.innerHTML = regionais[dados['regional']]['nome']
-      $regional.appendChild(
-        btn({
-          id:'BtnEmail',
-          onclick: ()=> window.open(`https://mail.google.com/mail/u/0/?tf=cm&fs=1&to=${regionais[dados['regional']]['email']}&hl=pt-BR`),
-          icon: 'fa fa-mail-reply-all'
-        })
-      )
+      let btn = document.createElement('button');
+      btn.id = 'BtnEmail'
+      btn.addEventListener('click', () =>
+            window.open(`https://mail.google.com/mail/u/0/?tf=cm&fs=1&to=${regionais[dados['regional']]['email']}&hl=pt-BR`, '_blank', 'height=700,width=1000'))
+      btn.innerHTML = '📧'
+
+      $regional.appendChild(btn);
+
     } else $regional.innerHTML = 'N/A'
 
     $tel.innerHTML = dados['tel']
@@ -106,12 +107,11 @@ function estiloDaPagina (loja) {
 }
 
 function btn ({ id, onclick, icon }) {
-  let btn = document.createElement('button')
   btn.id = id
   btn.addEventListener('click', onclick)
-  btn.innerHTML = `<i class='${icon}'></i>`;
+  btn.innerHTML = `<i class='${icon}'></i>`
 
-  return btn;
+  return btn
 }
 
 window.onload = () => {
